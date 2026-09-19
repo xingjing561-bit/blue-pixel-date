@@ -4,6 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
   <meta name="theme-color" content="#bce9fb" />
+  <link rel="preload" as="image" href="hachiware-blue-card.jpg" fetchpriority="high" />
   <title>小八约会邀请</title>
   <style>
     :root{--bg:#dff5ff;--bg2:#bce9fb;--blue:#469bd0;--navy:#206897;--sky:#ccefff;--soft:#78a9c8;--white:#f8fdff;--shade:rgba(32,104,151,.22)}
@@ -11,10 +12,10 @@
   </style>
 </head>
 <body>
-  <section class="screen active" id="one"><div class="card"><img class="art" src="hachiware-blue-card.png" alt="抱花的小八" /><h1>你愿意跟我出去吗？</h1><div class="row"><button class="btn yes" id="yes">YES</button><button class="btn no" id="no">No</button></div><p class="hint" id="hint">你确定吗？</p></div></section>
-  <section class="screen" id="two"><div class="card"><img class="art" src="hachiware-blue-card.png" alt="抱花的小八" /><p class="yay">耶！</p><h1 style="font-size:18px">你答应我，我真的好开心。</h1><div class="row"><button class="btn" id="goActs">按一下继续 →</button></div></div></section>
-  <section class="screen" id="three"><div class="card"><img class="art" src="hachiware-blue-card.png" alt="抱花的小八" /><h1>你想一起做什么？</h1><p class="sub">选一个你想和我一起做的</p><div class="grid" id="activities"></div><div class="row"><button class="btn lock" id="goDate" disabled>就决定是这个了 🔒</button></div></div></section>
-  <section class="screen" id="four"><div class="card"><img class="art" src="hachiware-blue-card.png" alt="抱花的小八" /><h1>挑一天约会吧</h1><p class="sub">选一天，安排我们的小小约会吧。</p><div class="calendar"><div class="calhead"><button class="arrow" id="prev">‹</button><b id="month"></b><button class="arrow" id="next">›</button></div><div class="dates" id="dates"></div></div><div class="row"><button class="btn lock" id="goLetter" disabled>继续 →</button></div></div></section>
+  <section class="screen active" id="one"><div class="card"><img class="art" src="hachiware-blue-card.jpg" alt="抱花的小八" decoding="async" fetchpriority="high" /><h1>你愿意跟我出去吗？</h1><div class="row"><button class="btn yes" id="yes">YES</button><button class="btn no" id="no">No</button></div><p class="hint" id="hint">你确定吗？</p></div></section>
+  <section class="screen" id="two"><div class="card"><img class="art" src="hachiware-blue-card.jpg" alt="抱花的小八" decoding="async" /><p class="yay">耶！</p><h1 style="font-size:18px">你答应我，我真的好开心。</h1><div class="row"><button class="btn" id="goActs">按一下继续 →</button></div></div></section>
+  <section class="screen" id="three"><div class="card"><img class="art" src="hachiware-blue-card.jpg" alt="抱花的小八" decoding="async" /><h1>你想一起做什么？</h1><p class="sub">选一个你想和我一起做的</p><div class="grid" id="activities"></div><div class="row"><button class="btn lock" id="goDate" disabled>就决定是这个了 🔒</button></div></div></section>
+  <section class="screen" id="four"><div class="card"><img class="art" src="hachiware-blue-card.jpg" alt="抱花的小八" decoding="async" /><h1>挑一天约会吧</h1><p class="sub">选一天，安排我们的小小约会吧。</p><div class="calendar"><div class="calhead"><button class="arrow" id="prev">‹</button><b id="month"></b><button class="arrow" id="next">›</button></div><div class="dates" id="dates"></div></div><div class="row"><button class="btn lock" id="goLetter" disabled>继续 →</button></div></div></section>
   <section class="screen" id="five"><div class="card"><div class="letter"><div class="bar"><span>❤ 情书.txt</span><button class="close" id="close">×</button></div><article><p>那就一直说明天见<br />直到真的明天见</p><p class="sign">约会快乐 ❤️❤️❤️</p></article></div><button class="btn" style="width:100%;margin-top:16px" id="send">就这样约了！💌</button><p class="status" id="status"></p><button class="again" id="again">再看一次</button></div></section>
   <script>
     (()=>{
